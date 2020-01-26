@@ -1,0 +1,24 @@
+1.创建gprc的一般步骤：
+	1.在一个.proto文件内定义服务
+	2.用protocol buffer编译器生成服务器和客户端代码
+	3.使用grpc的go API为你的服务实现一个简单的客户端和服务器
+2.grpc vs restAPI的优势：
+	1.可以通过protobuf定义接口
+	2.protobuf可以将数据序列化为二进制编码，减少传输需要的数据量
+	3.可以方便地支持流式通信
+	4.缺点：gRPC并没有提供分布式相关的必要组件
+3.在go的helloworld的测试：
+	1.go get github.com/grpc/grpc-go
+	2.go get github.com/golang/protobuf
+	3.src\github.com\golang\protobuf\protoc-gen-go目录下go build   go install
+	4.$GOPATH下bin的protoc-gen-go加入环境变量
+	5.protoc --go_out=plugins=grpc:. *.proto生成代码
+	6.protoc找不到命令解决方法：brew install grpc protobuf
+4.go get下载失败的解决方法：
+	1.创建本地路径下的文件夹
+	2.在github下载对应的包
+5.grpc的四种通信方式：
+1.客户端一次请求，服务器一次应答
+2.客户端一次请求，服务器多次应答（流式）
+3.客户端多次，服务器一次
+4.客户端多次，服务器多次

@@ -1,0 +1,14 @@
+{
+    "userList": [
+      {
+        "username": "lawrencelin",
+        "age": 28,
+        "graduate": "Tongji University"
+      },
+      {
+        "username": "findingsea",
+        "age": 28,
+        "graduate": "Fudan University"
+      }
+    ]
+  }
